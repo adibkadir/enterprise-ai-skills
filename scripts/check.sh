@@ -6,6 +6,7 @@ python3 - <<'PY'
 from pathlib import Path
 import re
 import sys
+import zipfile
 
 root = Path.cwd()
 skills_dir = root / "skills"
@@ -50,8 +51,22 @@ for folder in folders:
         sys.exit(f"FAIL: {folder.name}: invalid skill name {name!r}")
     if not description or len(description) > 1024:
         sys.exit(f"FAIL: {folder.name}: description must be present and at most 1024 characters")
-    if not (dist_dir / f"{folder.name}.skill").is_file():
+    archive_path = dist_dir / f"{folder.name}.skill"
+    if not archive_path.is_file():
         sys.exit(f"FAIL: {folder.name}: dist/{folder.name}.skill not found")
+    member = f"{folder.name}/SKILL.md"
+    try:
+        with zipfile.ZipFile(archive_path) as archive:
+            if archive.namelist().count(member) != 1:
+                sys.exit(f"FAIL: {folder.name}: {archive_path.relative_to(root)} must contain {member!r} at the archive root")
+            expected_skill = skill_file.read_bytes()
+            if archive.getinfo(member).file_size != len(expected_skill):
+                sys.exit(f"FAIL: {folder.name}: {member} in {archive_path.relative_to(root)} does not match {skill_file.relative_to(root)}")
+            archived_skill = archive.read(member)
+    except Exception as error:
+        sys.exit(f"FAIL: {folder.name}: cannot read {archive_path.relative_to(root)}: {error}")
+    if archived_skill != expected_skill:
+        sys.exit(f"FAIL: {folder.name}: {member} in {archive_path.relative_to(root)} does not match {skill_file.relative_to(root)}")
 
 print(f"PASS: checked {len(folders)} skill(s)")
 PY
