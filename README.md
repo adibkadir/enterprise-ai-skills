@@ -14,6 +14,7 @@ Code.
 
 | Skill | What it does | Download |
 |---|---|---|
+| Board update | Drafts a quarterly board update with results against plan, wins, misses, risks, and board asks. | [Download](dist/board-update.skill) |
 
 ## License
 
