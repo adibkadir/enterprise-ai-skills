@@ -19,3 +19,5 @@ Code.
 ## License
 
 MIT.
+
+Pull requests labelled factory are opened by the Adib Factory GitHub App and merged only after a person approves them.
