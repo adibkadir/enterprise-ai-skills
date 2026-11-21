@@ -64,3 +64,28 @@ Help an executive make a clear, timely decision and secure the necessary agreeme
 **Open questions** — What is the renewal price and is it within the approved budget?
 
 This example shows the format, not facts to reuse. Use only information supplied for the actual decision.
+
+## Worked example (invented): Select a research vendor
+
+# Decision memo: Select a customer research vendor
+
+**To:** COO  
+**From:** Head of Product  
+**Decision needed by:** 10 July 2026
+
+**Decision** — Which vendor should run customer interviews before the Q3 roadmap is finalized?
+
+**Recommendation** — Choose Northstar Research: its proposed four-week schedule meets the roadmap deadline, and its fixed $30,000 fee is within budget.
+
+**Options considered**
+
+| Option | Advantages | Trade-offs |
+|---|---|---|
+| Northstar Research (recommended) | Four-week schedule meets the roadmap deadline | $30,000 fee |
+| Signal Insights | Lower $24,000 fee | Six-week schedule means results arrive after roadmap decisions |
+
+**Risks and mitigations** — Northstar's schedule leaves little room for recruiting delays; Product will confirm the participant list before kickoff.
+
+**Agreement and next steps**
+- COO: approve the $30,000 engagement by 10 July.
+- Head of Product: finalize the participant list by 13 July and start onboarding.
