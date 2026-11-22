@@ -15,6 +15,7 @@ Code.
 | Skill | What it does | Download |
 |---|---|---|
 | Board update | Drafts a quarterly board update with results against plan, wins, misses, risks, and board asks. | [Download](dist/board-update.skill) |
+| Decision memo | Drafts a one-page memo with a decision deadline, options and trade-offs, a recommendation, risks, and next steps. | [Download](dist/decision-memo.skill) |
 | Hard conversation | Prepares performance feedback or a conversation about a confirmed role elimination. | [Download](dist/hard-conversation.skill) |
 
 ## License
