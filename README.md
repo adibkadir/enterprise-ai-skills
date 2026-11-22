@@ -15,6 +15,7 @@ Code.
 | Skill | What it does | Download |
 |---|---|---|
 | Board update | Drafts a quarterly board update with results against plan, wins, misses, risks, and board asks. | [Download](dist/board-update.skill) |
+| Decision memo | Drafts a one-page executive decision memo comparing options, recommending a course of action, and clarifying risks and required agreement deadlines. | [Download](dist/decision-memo.skill) |
 
 ## License
 
