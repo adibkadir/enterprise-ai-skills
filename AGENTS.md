@@ -22,7 +22,8 @@ Python 3 (standard library only).
 
 ## Scope and done
 
-For this readiness fix, leave skill content, shipped archives, and check
-behavior unchanged. Do not add preview or database infrastructure.
+Edit skill source in `skills/`; do not edit built `.skill` archives in `dist/`
+by hand. Keep the check offline, and do not add server, preview, or database
+infrastructure.
 
-Done means `bash scripts/check.sh` passes and the diff contains only `AGENTS.md`.
+Done means `bash scripts/check.sh` passes.
